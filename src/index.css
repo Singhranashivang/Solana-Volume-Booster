@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 228 22% 13%;
+    --foreground: 220 40% 98%;
+
+    --card: 231 21% 10%;
+    --card-foreground: 220 40% 98%;
+
+    --popover: 231 21% 10%;
+    --popover-foreground: 220 40% 98%;
+
+    --primary: 260 78% 74%;
+    --primary-foreground: 230 21% 11%;
+
+    --secondary: 197 71% 49%;
+    --secondary-foreground: 220 40% 98%;
+
+    --muted: 231 15% 20%;
+    --muted-foreground: 215 20% 75%;
+
+    --accent: 260 78% 74%;
+    --accent-foreground: 220 40% 98%;
+
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 220 40% 98%;
+
+    --border: 231 15% 18%;
+    --input: 231 15% 18%;
+    --ring: 260 78% 74%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 231 21% 10%;
+    --sidebar-foreground: 220 40% 98%;
+    --sidebar-primary: 260 78% 74%;
+    --sidebar-primary-foreground: 230 21% 11%;
+    --sidebar-accent: 231 15% 20%;
+    --sidebar-accent-foreground: 220 40% 98%;
+    --sidebar-border: 231 15% 18%;
+    --sidebar-ring: 260 78% 74%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-solana-darkest text-foreground;
+    font-family: 'Inter', 'Roboto Mono', monospace, sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Scrollbar styling for webkit browsers */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-solana-darkest;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-solana-purple rounded-full;
+  }
+}
+
+@layer components {
+  /* Reusable Solana DApp custom classes */
+  
+  .glass-panel {
+    @apply bg-solana-dark/80 backdrop-blur-lg border border-solana-purple/30 rounded-xl;
+  }
+
+  .terminal-text {
+    font-family: 'Roboto Mono', monospace;
+    @apply text-solana-gray;
+  }
+
+  .neon-glow {
+    @apply animate-glow-pulse;
+  }
+
+  .text-glow {
+    @apply animate-text-glow;
+  }
+
+  .button-glow {
+    @apply transition-glow hover:shadow-[0_0_15px_rgba(155,135,245,0.7)] duration-300;
+  }
+
+  .border-glow {
+    @apply animate-border-glow;
+  }
+}

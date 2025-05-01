@@ -1,0 +1,56 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types"
+    ],
+    "target": "es2020",  // Recommended for Solana/web3.js compatibility
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es2020",
+      "webworker"  // For service workers/CSP reporting
+    ],
+    "jsx": "react-jsx",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "allowJs": true,
+    "types": [
+      "vite/client",
+      "node"  // For crypto and other Node-like environments
+    ],
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true
+  },
+  "include": [
+    "src",
+    "vite.config.ts",
+    "types/**/*.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.jsx",
+    "tests/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.spec.ts",
+    "**/*.test.ts"
+  ]
+}
